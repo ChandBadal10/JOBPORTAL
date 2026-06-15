@@ -40,4 +40,4 @@ const companySchema = new mongoose.Schema({
 }, {timestamps: true});
 
 const companyModel = mongoose.Schema("Company", companySchema)
-export default companyModel
+export default companyModel;
