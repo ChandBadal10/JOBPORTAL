@@ -2,6 +2,7 @@ import { useState } from "react";
 import {  Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import UpdateProfile from "./components/UpdateProfile";
 
 const App = () => {
   // Load user from localStorage so refresh doesn't log you out
@@ -25,6 +26,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={user ? <Home user={user} setUser={handleSetUser} /> : <Navigate to="/login" />} />
         <Route path="/login" element={<Login setUser={handleSetUser} />} />
+        <Route path="/profile" element={<UpdateProfile />} />
       </Routes>
 
   );
