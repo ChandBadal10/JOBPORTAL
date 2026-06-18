@@ -36,7 +36,7 @@ const Login = ({ setUser }) => {
         role: loginRole,
       });
       setUser(res.data.user);
-      navigate(res.data.user.role === "recruiter" ? "/admin/companies" : "/");
+      navigate(res.data.user.role === "recruiter" ? "/admin/dashboard" : "/");
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");
     } finally {

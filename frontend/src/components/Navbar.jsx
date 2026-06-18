@@ -16,10 +16,12 @@ const Navbar = ({ user, setUser }) => {
     { label: "Home", to: "/" },
     { label: "Jobs", to: "/jobs" },
     { label: "Browse", to: "/browse" },
+    { label: "About", to: "/about" },
+    { label: "Contact", to: "/contact" },
   ];
 
   const recruiterLinks = [
-    { label: "Companies", to: "/admin/companies" },
+    { label: "Companies", to: "/admin/dashboard" },
     { label: "Jobs", to: "/admin/jobs" },
   ];
 
@@ -81,16 +83,12 @@ const Navbar = ({ user, setUser }) => {
             <>
               <Link
                 to="/login"
-                className="text-sm px-4 py-2 font-medium text-gray-700 rounded-lg hover:bg-gray-100 transition"
+                className="text-sm px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium shadow-sm"
+
               >
                 Login
               </Link>
-              <Link
-                to="/login"
-                className="text-sm px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium shadow-sm"
-              >
-                Sign Up
-              </Link>
+
             </>
           )}
 

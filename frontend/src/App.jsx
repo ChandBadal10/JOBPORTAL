@@ -3,6 +3,7 @@ import {  Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import UpdateProfile from "./components/UpdateProfile";
+import RecruiterDashboard from "./pages/RecruiterDashboard";
 
 const App = () => {
   // Load user from localStorage so refresh doesn't log you out
@@ -27,6 +28,8 @@ const App = () => {
         <Route path="/" element={user ? <Home user={user} setUser={handleSetUser} /> : <Navigate to="/login" />} />
         <Route path="/login" element={<Login setUser={handleSetUser} />} />
         <Route path="/profile" element={<UpdateProfile />} />
+        {/* Recruiter */}
+        <Route path="/admin/dashboard" element={user?.role === "recruiter" ? <RecruiterDashboard user={user} setUser={handleSetUser} /> : <Navigate to="/login" />} />
       </Routes>
 
   );

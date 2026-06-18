@@ -106,16 +106,7 @@ const UpdateProfile = () => {
 
           <div className="relative flex flex-col md:flex-row items-center gap-8">
 
-            {/* PROFILE IMAGE */}
-            <div className="relative">
-              <img
-                src="https://i.pravatar.cc/200"
-                alt="profile"
-                className="w-32 h-32 rounded-full border-4 border-white object-cover shadow-xl"
-              />
 
-              <div className="absolute bottom-1 right-1 bg-green-400 w-5 h-5 rounded-full border-2 border-white"></div>
-            </div>
 
             {/* INFO */}
             <div className="flex-1 text-center md:text-left">

@@ -54,11 +54,9 @@ const jobSchema = new mongoose.Schema({
         ref: "Application",
         default: null,
     }],
-    experienceLevel: {
-    type: String,
-    required: true
 
-    }
+
+
 
 
 }, {timestamps: true})
