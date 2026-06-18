@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import UpdateProfile from "./components/UpdateProfile";
 import RecruiterDashboard from "./pages/RecruiterDashboard";
+import CreateJob from "./pages/Creatjob";
 
 const App = () => {
   // Load user from localStorage so refresh doesn't log you out
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/profile" element={<UpdateProfile />} />
         {/* Recruiter */}
         <Route path="/admin/dashboard" element={user?.role === "recruiter" ? <RecruiterDashboard user={user} setUser={handleSetUser} /> : <Navigate to="/login" />} />
+         <Route path="/admin/jobs/create" element={user?.role === "recruiter" ? <CreateJob user={user} setUser={handleSetUser} /> : <Navigate to="/login" />} />
       </Routes>
 
   );
